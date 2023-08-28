@@ -328,45 +328,6 @@ function compactItem(compareWith
 )
 /*: LayoutItem*/
 {
-  // var compactV = compactType === "vertical";
-  // var compactH = compactType === "horizontal";
-  //
-  // if (compactV) {
-  //   // Bottom 'y' possible is the bottom of the layout.
-  //   // This allows you to do nice stuff like specify {y: Infinity}
-  //   // This is here because the layout must be sorted in order to get the correct bottom `y`.
-  //   l.y = Math.min(bottom(compareWith), l.y); // Move the element up as far as it can go without colliding.
-  //
-  //   while (l.y > 0 && !getFirstCollision(compareWith, l)) {
-  //     l.y--;
-  //   }
-  // } else if (compactH) {
-  //   // Move the element left as far as it can go without colliding.
-  //   while (l.x > 0 && !getFirstCollision(compareWith, l)) {
-  //     l.x--;
-  //   }
-  // } // Move it down, and keep moving it down if it's colliding.
-  //
-  //
-  // var collides;
-  //
-  // while (collides = getFirstCollision(compareWith, l)) {
-  //   if (compactH) {
-  //     resolveCompactionCollision(fullLayout, l, collides.x + collides.w, "x");
-  //   } else {
-  //     resolveCompactionCollision(fullLayout, l, collides.y + collides.h, "y");
-  //   } // Since we can't grow without bounds horizontally, if we've overflown, let's move it down and try again.
-  //
-  //
-  //   if (compactH && l.x + l.w > cols) {
-  //     l.x = cols - l.w;
-  //     l.y++;
-  //   }
-  // } // Ensure that there are no negative positions
-  //
-  //
-  // l.y = Math.max(l.y, 0);
-  // l.x = Math.max(l.x, 0);
   return l;
 }
 /**
