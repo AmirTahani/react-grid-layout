@@ -362,9 +362,9 @@ function correctBounds(layout
     if (!l.static) collidesWith.push(l);else {
       // If this is static and collides with other statics, we must move it down.
       // We have to do something nicer than just letting them overlap.
-      while (getFirstCollision(collidesWith, l)) {
-        l.y++;
-      }
+      // while (getFirstCollision(collidesWith, l)) {
+      //   l.y++;
+      // }
     }
   }
 
