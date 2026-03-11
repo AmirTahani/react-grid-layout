@@ -378,18 +378,18 @@ var ReactGridLayout = /*#__PURE__*/function (_React$Component) {
         };
         // var calculatedPosition = (0, _calculateUtils.calcXY)(positionParams, layerY, layerX, finalDroppingItem.w, finalDroppingItem.h);
 
-        _this.setState({
-          droppingDOMNode: /*#__PURE__*/React.createElement("div", {
-            key: finalDroppingItem.i
-          }),
-          droppingPosition: droppingPosition,
-          layout: [].concat(_toConsumableArray(layout), [_objectSpread(_objectSpread({}, finalDroppingItem), {}, {
-            x: layerX,
-            y: layerY,
-            static: false,
-            isDraggable: true
-          })])
-        });
+        // _this.setState({
+        //   droppingDOMNode: /*#__PURE__*/React.createElement("div", {
+        //     key: finalDroppingItem.i
+        //   }),
+        //   droppingPosition: droppingPosition,
+        //   layout: [].concat(_toConsumableArray(layout), [_objectSpread(_objectSpread({}, finalDroppingItem), {}, {
+        //     x: layerX,
+        //     y: layerY,
+        //     static: false,
+        //     isDraggable: true
+        //   })])
+        // });
       } else if (_this.state.droppingPosition) {
         var _this$state$droppingP = _this.state.droppingPosition,
             left = _this$state$droppingP.left,
