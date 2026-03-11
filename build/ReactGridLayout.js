@@ -354,16 +354,18 @@ var ReactGridLayout = /*#__PURE__*/function (_React$Component) {
 
       var finalDroppingItem = _objectSpread(_objectSpread({}, droppingItem), onDragOverResult);
 
-      var layout = _this.state.layout; // This is relative to the DOM element that this event fired for.
-
-      var _e$nativeEvent = e.nativeEvent,
-          layerX = _e$nativeEvent.layerX,
-          layerY = _e$nativeEvent.layerY;
-      var droppingPosition = {
-        left: layerX / transformScale,
-        top: layerY / transformScale,
-        e: e
-      };
+        var layout = _this.state.layout; // Use coordinates relative to the grid container (e.currentTarget) to avoid jumping
+        // when dragging over child elements - layerX/layerY are relative to event target which
+        // changes as we hover over different items, causing incorrect position updates.
+        var rect = e.currentTarget.getBoundingClientRect();
+        var scale = transformScale || 1;
+        var layerX = (e.clientX - rect.left) / scale;
+        var layerY = (e.clientY - rect.top) / scale;
+        var droppingPosition = {
+            left: layerX,
+            top: layerY,
+            e: e
+        };
 
       if (!_this.state.droppingDOMNode) {
         var positionParams
