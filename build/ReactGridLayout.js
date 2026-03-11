@@ -376,7 +376,7 @@ var ReactGridLayout = /*#__PURE__*/function (_React$Component) {
           containerWidth: width,
           containerPadding: containerPadding || margin
         };
-        var calculatedPosition = (0, _calculateUtils.calcXY)(positionParams, layerY, layerX, finalDroppingItem.w, finalDroppingItem.h);
+        // var calculatedPosition = (0, _calculateUtils.calcXY)(positionParams, layerY, layerX, finalDroppingItem.w, finalDroppingItem.h);
 
         _this.setState({
           droppingDOMNode: /*#__PURE__*/React.createElement("div", {
@@ -384,8 +384,8 @@ var ReactGridLayout = /*#__PURE__*/function (_React$Component) {
           }),
           droppingPosition: droppingPosition,
           layout: [].concat(_toConsumableArray(layout), [_objectSpread(_objectSpread({}, finalDroppingItem), {}, {
-            x: calculatedPosition.x,
-            y: calculatedPosition.y,
+            x: layerX,
+            y: layerY,
             static: false,
             isDraggable: true
           })])
